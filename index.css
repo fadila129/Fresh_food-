@@ -24,6 +24,7 @@
     width: 100px;
     height: 100%;
     padding: 7px 0;
+    margin-bottom: 12px;
 }
 .list-lien{
     display: flex;
@@ -572,6 +573,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 40px 8% 10px;
+    /* margin: 120px 0 0;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    height: 300px; */
 }
 .title{
     display: flex;
@@ -598,7 +603,7 @@ footer{
     margin: 120px 0 0;
     border-radius: 5px;
     background-color: #EEEEEE;
-    height: 300px;
+    width: 100%;
 }
 .p{
     font-size: 16px;
@@ -611,4 +616,194 @@ footer{
 }
 .title i{
     margin: 5px 0;
+}
+/* le pb etait le navigateur , maintenant le logo se trouve au centre comment faire qu'il soit le plus a gauche avec le hamburgeur uniquement */
+/* Menu Hamburger */
+#hamburger{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+@media(max-width:970px){
+     #hamburger{
+        position: relative;
+        display: flex;
+        margin-top: 10px;
+        z-index: 150;
+        font-size: 35px;
+          
+    }
+    #hamburger.active{
+        left: 0;
+    }
+    .souli-1{
+        
+        position: fixed;
+        left: -100%;  
+        top: 70px;  
+        flex-direction: column;
+        background-color: white;
+        width: 200px; 
+        height: 300px;
+        padding: 20px;
+        gap: 20px;
+        transition: left 0.5s ease; 
+        box-shadow: 6px 0 10px rgba(0,0,0,0.1);
+        align-items: center;
+        border-radius: 5px;
+        /* z-index: 999; */
+    }
+    .souli-1.active{
+        left: 0;
+    }
+    .navbar img{
+        width: 100px;
+        height: auto;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .list-lien:not(.souli-1){
+        display: flex;
+        gap: 20px;
+        margin-top: 13px;
+    }
+    .list-lien:not(.souli-1) i{
+        font-size: 25px;
+    }
+   
+}
+
+@media (max-width:1000px){
+    .section-principale{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .text-principale h1 {
+        font-size: 50px;
+        white-space: nowrap;
+    }
+    .image-principale{
+        margin-top: 50px;
+    }
+}
+@media (max-width:1150px){
+    .section-about{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .image-about{
+        margin-top: 40px;
+    }
+    .image-about img{
+        width: 450px;
+        height: auto;
+    }
+}
+@media(max-width:1350px){
+    .menu{
+        text-align: center;
+    }
+    .grid-menu{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .card-menu{
+        margin-top: 40px;
+    }
+}
+@media(max-width:1350px){
+    .menu2{
+        text-align: center;
+    }
+    .grid2{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .grid-menu2{
+        margin-top: 40px;
+    }
+}
+@media(max-width:1200px){
+    .member{
+        text-align: center;
+    }
+    .list-card{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .cardm{
+        margin-top: 60px;
+    }
+}
+@media(max-width:1250px){
+    .Order-section a{
+        text-align: center;
+    }
+    .order{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .img-order img{
+        width: 390px;
+        height: auto;
+    }
+    .order form{
+     
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    /* .order-btn{
+        display: flex;
+        align-items: center;
+    } */
+    
+}
+@media(max-width:1370px){
+    .profil{
+        margin-top:90px ;
+    }
+}
+@media(max-width:1370px){
+    .footer{
+        width: 300px;
+        height: auto;
+    }
+    .flex-foot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
