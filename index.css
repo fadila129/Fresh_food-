@@ -805,6 +805,7 @@ footer{
     .footer{
         width: 300px;
         height: auto;
+        
     }
     .flex-foot{
         display: flex;
